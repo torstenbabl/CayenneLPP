@@ -37,6 +37,12 @@
 #define LPP_GPS 136    // 3 byte lon/lat 0.0001 °, 3 bytes alt 0.01 meter
 #define LPP_SWITCH 142 // 1 byte, 0/1
 
+// Custom for ATLAS Types
+#define LPP_ATLAS_PH                  90  // 4 bytes 0.001 signed
+#define LPP_ATLAS_RTD                 91  // 4 bytes 0.001°C signed
+#define LPP_ATLAS_DO                  92  // 2 bytes 0.01 mg/l unsigned
+#define LPP_ATLAS_EC                  93  // 4 bytes 0.01 uS/cm signed
+
 // Only Data Size
 #define LPP_DIGITAL_INPUT_SIZE 1
 #define LPP_DIGITAL_OUTPUT_SIZE 1
@@ -64,6 +70,12 @@
 #define LPP_SWITCH_SIZE 1
 #define LPP_CONCENTRATION_SIZE 2
 #define LPP_COLOUR_SIZE 3
+
+// Custom for ATLAS
+#define LPP_ATLAS_PH_SIZE               4
+#define LPP_ATLAS_RTD_SIZE              4
+#define LPP_ATLAS_DO_SIZE               2
+#define LPP_ATLAS_EC_SIZE               4
 
 // Multipliers
 #define LPP_DIGITAL_INPUT_MULT 1
@@ -93,6 +105,12 @@
 #define LPP_SWITCH_MULT 1
 #define LPP_CONCENTRATION_MULT 1
 #define LPP_COLOUR_MULT 1
+
+// Cusstom for Atlas
+#define LPP_ATLAS_PH_MULT               1000
+#define LPP_ATLAS_RTD_MULT              1000
+#define LPP_ATLAS_DO_MULT               100
+#define LPP_ATLAS_EC_MULT               100
 
 #define LPP_ERROR_OK 0
 #define LPP_ERROR_OVERFLOW 1

@@ -262,6 +262,15 @@ const char * CayenneLPP::getTypeName(uint8_t type) {
           return "colour";
 #endif
 
+        case LPP_ATLAS_PH:
+          return "atlas_ph";
+        case LPP_ATLAS_RTD:
+          return "atlas_rtd";
+        case LPP_ATLAS_DO:
+          return "atlas_do";
+        case LPP_ATLAS_EC:
+          return "atlas_ec";
+
         default:
           return nullptr;
     }
@@ -402,6 +411,15 @@ uint8_t CayenneLPP::getTypeSize(uint8_t type) {
       return LPP_COLOUR_SIZE;
 #endif
 
+    case LPP_ATLAS_PH:
+      return LPP_ATLAS_PH_SIZE;
+    case LPP_ATLAS_RTD:
+      return LPP_ATLAS_RTD_SIZE;
+    case LPP_ATLAS_DO:
+      return LPP_ATLAS_DO_SIZE;
+    case LPP_ATLAS_EC:
+      return LPP_ATLAS_EC_SIZE;
+
     default:
       return 0;
   }
@@ -536,6 +554,15 @@ uint32_t CayenneLPP::getTypeMultiplier(uint8_t type) {
       return LPP_COLOUR_MULT;
 #endif
 
+    case LPP_ATLAS_PH:
+      return LPP_ATLAS_PH_MULT;
+    case LPP_ATLAS_RTD:
+      return LPP_ATLAS_RTD_MULT;
+    case LPP_ATLAS_DO:
+      return LPP_ATLAS_DO_MULT;
+    case LPP_ATLAS_EC:
+      return LPP_ATLAS_EC_MULT;
+
     default:
       return 0;
   }
@@ -566,6 +593,8 @@ bool CayenneLPP::getTypeSigned(uint8_t type) {
 #ifndef CAYENNE_DISABLE_GPS
     case LPP_GPS:
 #endif
+    case LPP_ATLAS_PH:
+    case LPP_ATLAS_RTD:
       return true;
   }
   return false;
